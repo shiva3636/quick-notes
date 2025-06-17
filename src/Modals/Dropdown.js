@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Dropdown = ({
-  isOpen,
-position = { top: 0, left: 0 },
 options = [],
 
 }) => {
