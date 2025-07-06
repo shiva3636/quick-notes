@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Label from '../components/Label'
 import { HiOutlinePaperClip } from "react-icons/hi";
 import IconWrapper from '../components/IconWrapper';
@@ -6,36 +6,44 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { IoMdShare } from "react-icons/io";
 import { IoMdNotifications } from "react-icons/io";
 import Dropdown from '../Modals/Dropdown';
-function NoteCard() {
-    const [isOpen, setIsOpen] = useState(false);
+import useDropdown from '../hooks/useDropdown';
+import { generateBgColor } from '../utils/methods';
+function NoteCard({note}) {
+    // const [isOpen, setIsOpen] = useState(false);
+    const { dropdownRef, isOpen, position, openDropdown } = useDropdown();
+
     const options = [
         {
             label: 'Edit',
-            onClick: () => {
+            onClick: (e) => {
+                e.preventDefault()
                 console.log('Edit clicked')
-                setIsOpen(false)
+                // openDropdown()
             }
         },
         {
             label: 'Delete',
-            onClick: () => {
+            onClick: (e) => {
+                e.preventDefault()
                 console.log('Delete clicked')
-                setIsOpen(false)
+                // openDropdown()
             }
         },
         {
             label: 'Archive',
-            onClick: () => {
+            onClick: (e) => {
+                e.preventDefault()
                 console.log('Archive clicked')
-                setIsOpen(false)
+                // openDropdown()
             }
         },
     ];
 
     return (
-        <div className="note-card border px-4 pt-4 pb-2 shadow-lg bg-white border-l-indigo-500 border-l-4 rounded-sm">
+        <div style={{backgroundColor: generateBgColor(note.borderColor, true) , borderLeftColor: note.borderColor}} className={`note-card border px-4 pt-4 pb-2 shadow-lg   border-l-4 rounded-sm flex-col justify-between`}>
+        
             <div className='flex justify-between items-center mb-2'>
-                <p className="text-lg font-semibold text-black">Note Title</p>
+                <p className="text-lg font-semibold text-black">{note.title}</p>
                 <div className='flex'>
                     <IconWrapper w={8} h={8}>
                         <IoMdNotifications size={18} />
@@ -47,24 +55,29 @@ function NoteCard() {
                     <IconWrapper w={8} h={8} >
 
                         <BsThreeDotsVertical size={18}
-                            onClick={() => setIsOpen(true)} />
-                        {isOpen && <Dropdown
-                            options={options}
-                        />}
+                            onClick={openDropdown} />
+
 
                     </IconWrapper>
-
+                    {isOpen && <Dropdown
+                        dropdownRef={dropdownRef}
+                        options={options}
+                        position={position}
+                    />}
                 </div>
             </div>
 
-            <p className="font-small text-gray-500">This is a sample note content. You can edit this text to add your own notes.</p>
+            <p className="font-small text-gray-500">{note.content}</p>
             <div className='flex flex-wrap gap-2 mt-2'>
-                <Label color="#ffff0070" />
-                <Label color="#0000ff69" />
-                <Label color="#ffa5007a" />
+                {
+                    note.tags.map(tag => {
+                        return <Label tag={tag} />
+                    })
+                }
+                
             </div>
             <div className="flex justify-between items-center mt-6">
-                <p className="text-xs text-gray-400">Created on: 2023-10-01</p>
+                <p className="text-xs text-gray-400">Created on: {note.createdOn}</p>
                 <IconWrapper Blue>
                     <HiOutlinePaperClip size={18} />
                 </IconWrapper>

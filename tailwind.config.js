@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      outlineOffset: {
+        '-1': '-1px',
+      },
       colors: {
         'bgSidebar': '#eceefd',
         'logoBorder': '#6366f1',
@@ -15,6 +18,12 @@ module.exports = {
       height: {
         'h-4.5': '4.5rem',
       },
+      width: {
+        'tw-1': "1rem",
+        'tw-2': "2rem",
+        'tw-3': "3rem",
+        'tw-4': "4rem",
+      }
     },
   },
   plugins: [],

@@ -15,23 +15,20 @@ const useDropdown = () => {
     setIsOpen(false);
   };
 
+
   useEffect(() => {
-   const handleClickOutside = (event) => {
-  console.log("Checking dropdownRef:", dropdownRef.current);
-  if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-    closeDropdown();
-  }
-};
 
-
-    if (isOpen) {
-      document.addEventListener("click", handleClickOutside);
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        closeDropdown()
+      }
     }
-
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isOpen]);
+  }, [dropdownRef]);
+
 
   return { isOpen, position, dropdownRef, openDropdown };
 };

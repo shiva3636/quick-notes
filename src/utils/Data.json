@@ -1,0 +1,106 @@
+{
+  "notes": [
+    {
+      "title": "Note Title 1",
+      "content": "This is a sample note content. You can edit this text to add your own notes.",
+      "tags": [
+        { "text": "Work", "backgroundColor": "#fefcbf", "borderColor": "#d6d32f" },
+        { "text": "Work", "backgroundColor": "#c3bdfa", "borderColor": "#8b7ef5" },
+        { "text": "Work", "backgroundColor": "#fbd38d", "borderColor": "#f6ad55" }
+      ],
+      "createdOn": "2023-10-01",
+      "borderColor": "#6366f1",
+      "backgroundColor": "#ffffff"
+    },
+    {
+      "title": "Note Title 2",
+      "content": "Don't forget to attend the client meeting at 3 PM.",
+      "tags": [
+        { "text": "Meeting", "backgroundColor": "#e0f7fa", "borderColor": "#00acc1" }
+      ],
+      "createdOn": "2023-10-02",
+      "borderColor": "#00acc1",
+      "backgroundColor": "#f0f9ff"
+    },
+    {
+      "title": "Note Title 3",
+      "content": "Buy groceries: milk, bread, eggs, and fruits.",
+      "tags": [
+        { "text": "Personal", "backgroundColor": "#ffe0b2", "borderColor": "#fb8c00" }
+      ],
+      "createdOn": "2023-10-03",
+      "borderColor": "#fb8c00",
+      "backgroundColor": "#fffaf0"
+    },
+    {
+      "title": "Note Title 4",
+      "content": "Project deadline extended by two days.",
+      "tags": [
+        { "text": "Project", "backgroundColor": "#c8e6c9", "borderColor": "#43a047" }
+      ],
+      "createdOn": "2023-10-04",
+      "borderColor": "#43a047",
+      "backgroundColor": "#f1fff0"
+    },
+    {
+      "title": "Note Title 5",
+      "content": "Remember to follow up on the design review.",
+      "tags": [
+        { "text": "Follow-up", "backgroundColor": "#e1bee7", "borderColor": "#8e24aa" }
+      ],
+      "createdOn": "2023-10-05",
+      "borderColor": "#8e24aa",
+      "backgroundColor": "#faf5ff"
+    },
+    {
+      "title": "Note Title 6",
+      "content": "Start preparing for the quarterly presentation.",
+      "tags": [
+        { "text": "Prep", "backgroundColor": "#fff9c4", "borderColor": "#fbc02d" }
+      ],
+      "createdOn": "2023-10-06",
+      "borderColor": "#fbc02d",
+      "backgroundColor": "#fffff5"
+    },
+    {
+      "title": "Note Title 7",
+      "content": "Check email for the onboarding documents.",
+      "tags": [
+        { "text": "Admin", "backgroundColor": "#d1c4e9", "borderColor": "#5e35b1" }
+      ],
+      "createdOn": "2023-10-07",
+      "borderColor": "#5e35b1",
+      "backgroundColor": "#f9f5ff"
+    },
+    {
+      "title": "Note Title 8",
+      "content": "Send invoice to the marketing team.",
+      "tags": [
+        { "text": "Finance", "backgroundColor": "#ffccbc", "borderColor": "#e64a19" }
+      ],
+      "createdOn": "2023-10-08",
+      "borderColor": "#e64a19",
+      "backgroundColor": "#fff7f5"
+    },
+    {
+      "title": "Note Title 9",
+      "content": "Complete frontend bug fixes before the release.",
+      "tags": [
+        { "text": "Dev", "backgroundColor": "#b2ebf2", "borderColor": "#0097a7" }
+      ],
+      "createdOn": "2023-10-09",
+      "borderColor": "#0097a7",
+      "backgroundColor": "#f4faff"
+    },
+    {
+      "title": "Note Title 10",
+      "content": "Prepare training material for the new joiners.",
+      "tags": [
+        { "text": "Training", "backgroundColor": "#dcedc8", "borderColor": "#7cb342" }
+      ],
+      "createdOn": "2023-10-10",
+      "borderColor": "#7cb342",
+      "backgroundColor": "#f6fff2"
+    }
+  ]
+}
